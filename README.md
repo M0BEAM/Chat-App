@@ -2,8 +2,6 @@
 
 ![Chat App Logo](./chat-app-logo.png)
 
-[Chat App - Live Application](https://your-live-chat-app-link.com/)
-
 Chat App is a real-time messaging platform that allows users to send and receive messages instantly. Built with modern technologies, it ensures smooth, real-time communication with a clean and intuitive interface.
 
 ## Features
@@ -36,35 +34,43 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/M0BEAM/chat-app.git
    cd chat-app
+    ```
 2. **Install dependencies:**  
-**Server Side:** 
+
+   **Server Side:** 
    ```bash
    cd server
    npm install
    npx ts-node --esm server.ts
-**Client Side:** 
+    ```
+   **Client Side:** 
    ```bash
    cd client
    npm install
    npm run dev
+   ```
+3. **Set up PostgreSQL:**  
 
-3.Set up PostgreSQL:
-
-Install PostgreSQL if not already installed. You can download it from here.
+Install PostgreSQL if not already installed.
 
 Open your PostgreSQL client and create a new database. Run the following command in your PostgreSQL shell:
-
-   CREATE DATABASE chat_app_db;
+```bash
+CREATE DATABASE chat_app_db;
 Create the messages table in the database:
+```
+Create table messages : 
+```bash
 CREATE TABLE messages (
   id SERIAL PRIMARY KEY,
   content TEXT NOT NULL,
   sender VARCHAR(255) NOT NULL,
   created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
+```
 In the root of your project, create a .env file and add your PostgreSQL connection string like so:
+```bash
 DATABASE_URL=your-postgresql-connection-string
-
+```
 ## License
 
 This project is licensed under the [MIT License].
