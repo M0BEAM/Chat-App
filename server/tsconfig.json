@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",               // Set the ECMAScript target version
+      "module": "NodeNext",             // Use NodeNext module system
+      "moduleResolution": "NodeNext",    // Use NodeNext module resolution strategy
+      "strict": true,                   // Enable all strict type-checking options
+      "esModuleInterop": true,          // Enables emit interoperability between CommonJS and ES Modules
+      "skipLibCheck": true,             // Skip type checking of declaration files
+      "forceConsistentCasingInFileNames": true // Ensure consistent file naming
+    },
+    "include": ["**/*.ts"],             // Include all TypeScript files
+    "exclude": ["node_modules"]         // Exclude node_modules
+  }
+  
